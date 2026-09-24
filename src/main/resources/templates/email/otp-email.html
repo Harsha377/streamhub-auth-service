@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>OTP Verification</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f5f5f5;
+            margin:0;
+            padding:40px;
+        }
+
+        .container{
+            max-width:600px;
+            margin:auto;
+            background:white;
+            border-radius:10px;
+            padding:30px;
+        }
+
+        .otp{
+            font-size:32px;
+            font-weight:bold;
+            color:#1565C0;
+            text-align:center;
+            letter-spacing:5px;
+            margin:30px 0;
+        }
+
+        .footer{
+            margin-top:40px;
+            font-size:12px;
+            color:gray;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2 th:text="${applicationName}"></h2>
+
+    <p>Hello <strong th:text="${name}"></strong>,</p>
+
+    <p>Your One Time Password is</p>
+
+    <div class="otp" th:text="${otp}"></div>
+
+    <p>
+        This OTP is valid for
+        <strong th:text="${expiry}"></strong> minutes.
+    </p>
+
+    <p>
+        If you didn't request this email,
+        simply ignore it.
+    </p>
+
+    <div class="footer">
+
+        © 2026 StreamHub Authentication Service
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

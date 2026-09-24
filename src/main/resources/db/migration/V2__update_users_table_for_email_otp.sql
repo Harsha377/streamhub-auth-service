@@ -1,0 +1,8 @@
+ALTER TABLE users
+ALTER COLUMN mobile_number DROP NOT NULL ;
+
+ALTER TABLE users
+ALTER COLUMN  email SET NOT NULL ;
+
+ALTER TABLE users
+ADD CONSTRAINT uk_users_email UNIQUE (email);

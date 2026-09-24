@@ -1,0 +1,3 @@
+ALTER TABLE user_sessions
+ADD CONSTRAINT uk_user_sessions_refresh_token_hash
+UNIQUE (refresh_token_hash);
